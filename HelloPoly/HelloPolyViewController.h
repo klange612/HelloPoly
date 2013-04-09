@@ -10,4 +10,10 @@
 
 @interface HelloPolyViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *numberOfSidesLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *decreaseButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *increaseButton;
+
 @end
