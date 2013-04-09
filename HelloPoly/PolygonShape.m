@@ -37,7 +37,7 @@
 
 -(void)setNumberOfSides:(int)value
 {
-    if (value > _minimumNumberOfSides && value < _maximumNumberOfSides) {
+    if (value >= _minimumNumberOfSides && value <= _maximumNumberOfSides) {
         _numberOfSides = value;
         NSLog(@"numsides: %i",_numberOfSides);
     }else NSLog(@"invalid number of sides");
@@ -71,7 +71,9 @@
     int sides = self.numberOfSides;
     NSString * polyName = @"";
     
-    if (sides == 3) {
+    if (sides == 2) {
+        polyName = @"digon";
+    } else if (sides == 3) {
         polyName = @"triangle";
     } else if (sides == 4) {
         polyName = @"square";
